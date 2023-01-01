@@ -1,6 +1,9 @@
-/* ########################## */
-/* ROOT VARIABLES */
-/* ########################## */
+/***  
+##########################
+ROOT Variables
+########################## 
+- Initialize root variables such as theme-color, site-width, and fonts.
+***/
 
 :root {
   --row-max-width: 1080px;
@@ -12,18 +15,18 @@
   --font-article: "adobe-caslon-pro", "Times New Roman", serif;
 }
 
-/* ########################## */
-/* HTML & BODY CONFIGURATION
-> Sets the background-color, font-family, and font-size.
-*/
+/***  
+##########################
+HTML & BODY SETTINGS
+########################## 
+- Set general background color, font-size, etc.
+***/
+
 html {
   background-color: var(--color-theme);
   font-family: var(--font-general);
   font-size: 12pt;
 }
-
-/* #### RELEVANT MEDIA QUERIES ###
-*/
 
 /* If less than 720px, reduce the font size. */
 @media (max-width: 720px) {
@@ -32,17 +35,18 @@ html {
   }
 }
 
-/*** LAYOUT.CSS v1.00
----- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- 
-Includes standard wrappers, containers, rows, columns
+/***  
+##########################
+LAYOUT.CSS - Version 1.00
+########################## 
+- Set standard wrappers, containers, rows, columns
 and grid formats, and relevant media queries. 
----- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
 ***/
 
 /* ########################## */
 /* STANDARD BUILDING BLOCKS
 - Container is the largest option, maintains vertical space.
-- Rows are placed within containers, they maintain horizontal space.
+- Rows are placed within containers, and they maintain horizontal space.
 - Columns are rarely used if more than one column is used without a grid.
 - Margin determines vertical white space, padding determines horizontal white space.
 */
@@ -154,10 +158,11 @@ or when there are two or more items in one column within a grid.
   }
 }
 
-/*** UTILITIES.CSS v1.00
----- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- 
-Includes generic utilities such as .noselect and others.
----- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- 
+/***  
+##########################
+UTILITIES.CSS - Version 1.00
+########################## 
+- Includes generic utilities such as .noselect and others.
 ***/
 
 /* Disable text selection to make it more difficult to copy and paste. */
@@ -170,70 +175,80 @@ Includes generic utilities such as .noselect and others.
   user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
-/*** GENERAL.CSS v1.00
----- ---- ---- ---- ---- ---- ---- ---- ---- ---- ---- 
-Includes general configurations for fonts and other elements.
----- ---- ---- ---- ---- ---- ---- ---- ---- ---- ----
+/***  
+##########################
+GENERAL.CSS - Version 1.00
+########################## 
+- Sets general configurations for fonts and other elements.
 ***/
-
-/* ########################## */
-/* FONT SETTINGS
-- html (line-height: 1.5em)
-- h1 (3rem), h2 (2rem), h3 (1.5rem), h4 (1.125rem), h5 (1rem), h6 (0.875rem)
-- p (1rem), subline (1.125rem)
-- em (italic), cite (italic), strong (font-weight: 700)
-- ul (disc inside), ol (decimal inside)
-- figcaption (1rem), blockquote (1rem)
-*/
 
 html * {
   line-height: 1.5em;
 }
 
-.read {
+p {
   font-size: 1.125rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
-.read p,
-.read h3,
-.read h4,
-.read h5,
-.read h6 {
-  margin: 1rem auto;
+p.read {
+  font-size: 1.3125rem;
 }
 
-/* Text Styles */
-.major,
-.subline {
-  font-size: 1.125rem;
+.major {
+  font-size: 1.25rem;
 }
 
 .minor {
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 h1 {
   font-size: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 h2 {
   font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 h3 {
   font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 h4 {
   font-size: 1.125rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 h5 {
   font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 h6 {
   font-size: 0.875rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.grid p,
+.grid h1,
+.grid h2,
+.grid h3,
+.grid h4,
+.grid h5,
+.grid h6 {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
 }
 
 em {
@@ -249,6 +264,7 @@ strong {
 }
 
 ul {
+  font-size: 1.125rem;
   list-style: disc inside;
 }
 
@@ -256,12 +272,21 @@ ul ul {
   padding-left: 1rem;
 }
 
+ul ul ul {
+  padding-left: 2rem;
+}
+
 ol {
+  font-size: 1.125rem;
   list-style: decimal inside;
 }
 
 ol ol {
   padding-left: 1rem;
+}
+
+ol ol ol {
+  padding-left: 2rem;
 }
 
 ul.no-style,
@@ -270,11 +295,11 @@ ol.no-style {
 }
 
 figcaption {
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 blockquote {
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 /* ########################## */
@@ -480,7 +505,7 @@ Includes styles for the main page footer.
 /* This is the paragraph for copyright information. */
 #bf-bar-legal-copyright,
 #bf-bar-legal-cookie {
-  margin: 1rem auto; /* Add space between elements. */
+  margin-bottom: 1rem;
   font-size: 0.875rem;
 }
 
@@ -614,7 +639,7 @@ Includes styles for the main page header.
 
 #bh-navigation .menu p,
 #bh-navigation .menu .paragraph {
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 400;
   color: var(--color-theme);
   margin-bottom: 0.5rem;
@@ -671,7 +696,7 @@ Includes styles for the main page header.
   position: relative;
   grid-row: 3;
   color: var(--color-shade);
-  font-size: 1.3rem;
+  font-size: 1.3125rem;
 }
 
 /* Pre-Meta (Archive) Information*/
@@ -683,6 +708,8 @@ Includes styles for the main page header.
 
 .m-article-premeta-category {
   position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
   width: fit-content;
   color: var(--color-accent);
   font-size: 1.125rem;
@@ -741,7 +768,7 @@ Includes styles for the main page header.
   position: relative;
   margin: auto;
   color: var(--color-shade);
-  font-size: 1rem;
+  font-size: 1.125rem;
   text-align: center;
 }
 
@@ -756,8 +783,11 @@ Includes styles for the main page header.
 /* MODULE DIVISION: Reading Area (md-read) */
 .m-article > .md-content > .md-read {
   max-width: var(--text-max-width);
-  font-size: 1.3rem;
   margin: auto;
+}
+
+.md-read p {
+  font-size: 1.3125rem;
 }
 
 .m-article > .md-content > .md-read p {
@@ -779,7 +809,7 @@ Includes styles for the main page header.
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.125rem;
   color: var(--color-shade);
 }
 
@@ -828,14 +858,17 @@ Includes styles for the main page header.
 }
 
 .m-asnippet-title {
-  padding: 0rem 1rem;
+  margin-top: 0rem;
   margin-bottom: 0rem;
+  padding: 0rem 1rem;
   font-size: 1.5rem;
   font-weight: 700;
   color: #000000;
 }
 
 .m-asnippet-meta {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
   padding: 0rem 1rem;
   font-size: 1.125rem;
   font-weight: 600;
@@ -843,6 +876,8 @@ Includes styles for the main page header.
 }
 
 .m-asnippet-excerpt {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
   padding: 0rem 1rem;
   font-size: 1.125rem;
   font-weight: 400;
@@ -982,17 +1017,19 @@ Includes styles for the main page header.
 }
 
 .m-notepad-title {
-  border-bottom: 2px solid black;
   margin-top: 0rem;
   margin-bottom: 0rem;
+  border-bottom: 2px solid black;
   font-weight: 700;
 }
 
 .m-notepad-article {
-  font-size: 1.125rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
   padding: 1rem 0rem 0.5rem 0rem;
   border-bottom: 1px solid black;
   color: var(--color-shade);
+  font-size: 1.125rem;
 }
 
 .m-notepad > .m-notepad-article:last-of-type {
@@ -1017,10 +1054,14 @@ Includes styles for the main page header.
 }
 
 .md-blog-title {
+  margin-top: 0px;
+  margin-bottom: 0px;
   position: relative;
 }
 
 .md-blog-description {
+  margin-top: 0px;
+  margin-bottom: 0px;
   font-size: 1.125rem;
 }
 
