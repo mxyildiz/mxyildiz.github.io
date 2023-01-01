@@ -358,7 +358,7 @@ img.logo {
 }
 
 .overlay {
-  padding: 4rem;
+  padding: 2rem;
   background-color: rgba(0, 0, 0, 0.4);
   color: white;
 }
@@ -977,18 +977,22 @@ Includes styles for the main page header.
 
 .m-notepad {
   position: relative;
+  border: 1px solid black;
+  padding: 1rem;
 }
 
 .m-notepad-title {
   border-bottom: 2px solid black;
   margin-top: 0rem;
   margin-bottom: 0rem;
+  font-weight: 700;
 }
 
 .m-notepad-article {
   font-size: 1.125rem;
   padding: 1rem 0rem 0.5rem 0rem;
   border-bottom: 1px solid black;
+  color: var(--color-shade);
 }
 
 .m-notepad > .m-notepad-article:last-of-type {
