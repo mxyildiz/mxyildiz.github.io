@@ -232,10 +232,6 @@ p {
   margin-bottom: 1em;
 }
 
-p.read {
-  font-size: 1.3125rem;
-}
-
 .major {
   font-size: 1.25rem;
 }
@@ -361,6 +357,12 @@ a:hover {
   cursor: pointer;
 }
 
+.reading p,
+.reading ol,
+.reading ul {
+  font-size: 1.3125rem;
+}
+
 /* #### LOGO Settings #### */
 
 /* If the LOGO is a text... */
@@ -397,22 +399,15 @@ MODULE: ARTICLE  (m-article)
   position: relative;
   font-family: var(--font-article);
 }
-
-/* -------- */
-/* HEADER */
+/* ## HEADER ## */
 .m-article > .md-header {
   position: relative;
-  display: grid;
-  gap: 1rem;
-  grid-template-rows: auto;
   justify-content: start;
 }
 
 .m-article-headline {
   position: relative;
   grid-row: 2;
-  margin-top: 0rem;
-  margin-bottom: 0rem;
 }
 
 .m-article-subline {
@@ -431,13 +426,11 @@ MODULE: ARTICLE  (m-article)
 
 .m-article-premeta-category {
   position: relative;
-  margin-top: 0px;
-  margin-bottom: 0px;
   width: fit-content;
+  border-bottom: 0.5rem solid var(--color-accent);
   color: var(--color-accent);
   font-size: 1.125rem;
   font-weight: 600;
-  border-bottom: 0.5rem solid var(--color-accent);
 }
 
 /* Meta Information*/
@@ -490,44 +483,33 @@ MODULE: ARTICLE  (m-article)
 .m-article-feature-figure figcaption {
   position: relative;
   margin: auto;
+  text-align: center;
   color: var(--color-shade);
   font-size: 1.125rem;
-  text-align: center;
 }
 
-/* -------- */
-/* CONTENT */
-
+/* ## CONTENT ## */
 .m-article > .md-content {
   position: relative;
   margin: 2rem auto;
 }
 
-/* MODULE DIVISION: Reading Area (md-read) */
+/* ### MODULE DIVISION: Reading Area (md-read) */
 .m-article > .md-content > .md-read {
   max-width: var(--text-max-width);
   margin: auto;
 }
 
-.md-read p {
-  font-size: 1.3125rem;
-}
-
-.m-article > .md-content > .md-read p {
-  margin: 1em auto;
-}
-/* ---- */
-
 /* Figures */
-.m-article > .md-content figure {
+.m-article > .md-content > .md-read figure {
   margin: 1rem auto;
 }
 
-.m-article > .md-content figure img {
+.m-article > .md-content > .md-read figure img {
   position: relative;
 }
 
-.m-article > .md-content figure figcaption {
+.m-article > .md-content > .md-read figure figcaption {
   margin-bottom: 1rem;
   margin-left: auto;
   margin-right: auto;
@@ -555,27 +537,62 @@ MODULE: ARTICLE  (m-article)
 }
 
 /* Lists */
-.m-article > .md-content ul {
+.m-article > .md-content > .md-read ul {
   margin: 1rem auto;
   font-size: 1.3rem;
   list-style: disc inside;
 }
 
-.m-article > .md-content ol {
+.m-article > .md-content > .md-read ol {
   margin: 1rem auto;
   font-size: 1.3rem;
   list-style: decimal inside;
 }
 
 /* Links */
-.m-article > .md-content a {
+.m-article > .md-content > .md-read a {
   color: var(--color-accent);
 }
 
-/* MODULE: (BLOG) ARTICLE-SNIPPET  (m-asnippet) */
+/***  
+##########################
+MODULE DIVISION: BLOG (md-blog)
+########################## 
+- The standard blog module division.
+***/
 
-/* -------------------------- */
+.md-blog {
+  position: relative;
+}
 
+/* ## HEADER ## */
+.md-blog > .md-header {
+  position: relative;
+}
+
+.md-blog-title {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: relative;
+}
+
+.md-blog-description {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 1.125rem;
+}
+
+/* ## CONTENT ## */
+.md-blog > .md-content {
+  position: relative;
+}
+
+/***  
+##########################
+MODULE: ARTICLE-SNIPPET  (m-asnippet)
+########################## 
+- The standard reading article layout.
+***/
 .m-asnippet {
   border: 1px solid black;
 }
@@ -625,23 +642,23 @@ MODULE: ARTICLE  (m-article)
   padding-bottom: 0.5rem;
 }
 
-.m-asnippet--vertical > .md-content .m-asnippet-title {
+.m-asnippet--vertical .m-asnippet-title {
   grid-row: 2;
 }
 
-.m-asnippet--vertical > .md-content .m-asnippet-figure {
+.m-asnippet--vertical .m-asnippet-figure {
   grid-row: 1;
 }
 
-.m-asnippet--vertical > .md-content .m-asnippet-figure-image {
+.m-asnippet--vertical .m-asnippet-figure-image {
   position: relative;
 }
 
-.m-asnippet--vertical > .md-content .m-asnippet-meta {
+.m-asnippet--vertical .m-asnippet-meta {
   grid-row: 3;
 }
 
-.m-asnippet--vertical > .md-content .m-asnippet-excerpt {
+.m-asnippet--vertical .m-asnippet-excerpt {
   grid-row: 4;
 }
 
@@ -650,17 +667,17 @@ MODULE: ARTICLE  (m-article)
   position: relative;
 }
 
-.m-asnippet--nofigure > .md-content .m-asnippet-title {
-  margin-top: 1rem;
-}
-
-.m-asnippet--nofigure .md-content {
+.m-asnippet--nofigure > .md-content {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   gap: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.m-asnippet--nofigure .m-asnippet-title {
+  margin-top: 1rem;
 }
 
 /* --horizontal */
@@ -729,9 +746,80 @@ MODULE: ARTICLE  (m-article)
   }
 }
 
-/* ########################## */
-/* MODULE: NOTEPAD */
-/* ########################## */
+/***  
+##########################
+MODULE: ARCHIVE HEADER  (m-aheader)
+########################## 
+- The standard reading article layout.
+***/
+
+/* Need to add this modifier to b-body division for m-ahead to work as intented. */
+.no-top-margin {
+  margin-top: 0rem;
+}
+
+.m-aheader {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: 0rem;
+  background-position: center;
+  background-size: cover;
+}
+
+.m-aheader--fullscreen > div {
+  display: flex;
+  height: calc(100vh - 144px);
+}
+
+.m-aheader-overlay {
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.m-aheader-overlay .typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  animation: aheader-typing 1s steps(40, end) forwards;
+}
+
+.m-aheader-overlay .typewriter--delayed {
+  animation: aheader-typing--delayed 2.5s steps(40, end) forwards;
+}
+
+/* The typing effect */
+@keyframes aheader-typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Delayed typing effect for the subline. */
+@keyframes aheader-typing--delayed {
+  from {
+    width: 0;
+  }
+  40% {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/***  
+##########################
+MODULE: NOTEPAD (m-notepad)
+########################## 
+- The standard notebook layout.
+***/
 
 .m-notepad {
   position: relative;
@@ -761,73 +849,4 @@ MODULE: ARTICLE  (m-article)
 
 .m-notepad-article-date {
   font-weight: 700;
-}
-
-/* ########################## */
-/* MODULE DIVISION: BLOG */
-/* ########################## */
-
-.md-blog {
-  position: relative;
-}
-
-/* HEADER */
-.md-blog > .md-header {
-  position: relative;
-}
-
-.md-blog-title {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  position: relative;
-}
-
-.md-blog-description {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  font-size: 1.125rem;
-}
-
-/* CONTENT */
-.md-blog > .md-content {
-  position: relative;
-}
-
-/* MODULE DIVISION: Blog - Feature Article (md-content-feature) */
-.md-blog > .md-content > .md-content-feature {
-  position: relative;
-  border: 1px solid black;
-}
-
-.md-blog > .md-content > .md-content-feature .m-asnippet {
-  border: none;
-}
-/* ---- */
-
-/* MODULE DIVISION: Blog - Article Deck (md-content-deck) */
-.md-blog > .md-content > .md-content-deck {
-  position: relative;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 1rem;
-}
-
-@media (min-width: 721px) {
-  .md-blog > .md-content > .md-content-deck .m-asnippet {
-    border-top: 0px;
-    border-right: 0px;
-    border-left: 0px;
-  }
-
-  .md-blog > .md-content > .md-content-deck .m-asnippet:last-of-type {
-    border-bottom: 0px;
-  }
-}
-
-@media (max-width: 720px) {
-  .md-blog > .md-content > .md-content-deck .m-asnippet .m-asnippet-title {
-    padding-top: 1rem;
-  }
 }
