@@ -1,0 +1,833 @@
+/***  
+##########################
+ROOT Variables
+########################## 
+- Initialize root variables such as theme-color, site-width, and fonts.
+***/
+
+:root {
+  --row-max-width: 1080px;
+  --text-max-width: 720px;
+  --color-theme: #ffffff;
+  --color-accent: #00356b;
+  --color-shade: #4a4a4a;
+  --font-general: "adobe-caslon-pro", "Times New Roman", serif;
+  --font-article: "adobe-caslon-pro", "Times New Roman", serif;
+}
+
+/***  
+##########################
+HTML & BODY SETTINGS
+########################## 
+- Set general background color, font-size, etc.
+***/
+
+html {
+  background-color: var(--color-theme);
+  font-family: var(--font-general);
+  font-size: 12pt;
+}
+
+/* If less than 720px, reduce the font size. */
+@media (max-width: 720px) {
+  html {
+    font-size: 10.5pt;
+  }
+}
+
+/***  
+##########################
+LAYOUT.CSS - Version 1.00
+########################## 
+- Set standard wrappers, containers, rows, columns
+and grid formats, and relevant media queries. 
+***/
+
+/* ########################## */
+/* STANDARD BUILDING BLOCKS
+- Container is the largest option, maintains vertical space.
+- Rows are placed within containers, and they maintain horizontal space.
+- Columns are rarely used if more than one column is used without a grid.
+- Margin determines vertical white space, padding determines horizontal white space.
+*/
+
+/* Standard Wrapper
+> Mark the element as a wrapper.
+? Use it only when you are wrapping a single piece of content. */
+.wrapper {
+  position: relative;
+  display: block;
+}
+
+/* Standard Container
+> Mark the element as a container.
+- Fullwidth, vertical margin, centered. 
+? Containers are essential for maintaining the vertical white space within the page.
+*/
+.container {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  margin: 2rem auto;
+  padding: 0rem 0rem;
+}
+
+/* Standard Row
+> Mark the element as a row.
+- Limited width, vertical margin, horizontal padding, centered.
+? Rows are essential for maintaining the horizontal white space within the page.
+*/
+.row {
+  position: relative;
+  display: block;
+  max-width: var(--row-max-width);
+  margin: 1rem auto;
+  padding: 0rem 1rem;
+}
+
+/* Row Variation: Fullwidth 
+> Override standard row's 'max-width' and extend it to fullwidth. 
+*/
+.row--fullwidth {
+  max-width: 100%;
+}
+
+/* Standard Column. 
+> Mark the element as a column.
+? Used only when there are two or more columns without a grid 
+or when there are two or more items in one column within a grid.
+*/
+.column {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+/* ########################## */
+/* AUTOMATED GRID LAYOUTS
+> Turn a division into a pre-defined grid with equal-width columns.
+? If there is only one item within a column, do not use .column as a wrapper.
+*/
+
+/* Standard Grid
+> Turn this element (container, row, column) into a grid.
+- Pre-determined gap, which requires text margins to be reset if within grid.
+*/
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Grid Column Counts 
+> Divide the grid into equally sized columns.
+? Do not use more than four columns for standard content.
+? If you need more than four columns, use a unique semantic ID or Class instead. 
+*/
+.grid.one-column {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid.two-column {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid.three-column {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid.four-column {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* #### RELEVANT MEDIA QUERIES ####
+*/
+
+/* If less than 1080px, turn four columns into two columns. */
+@media (max-width: 1080px) {
+  .grid.four-column {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+/* If less than 720px, turn all into a single column. */
+@media (max-width: 720px) {
+  .grid.two-column,
+  .grid.three-column,
+  .grid.four-column {
+    grid-template-columns: auto;
+  }
+}
+
+/***  
+##########################
+UTILITIES.CSS - Version 1.00
+########################## 
+- Includes generic utilities such as .noselect and others.
+***/
+
+/* Disable text selection to make it more difficult to copy and paste. */
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* - Disable element for print purposes. */
+@media print {
+  .hidden-print {
+    display: none !important;
+  }
+}
+
+/* #### UTILITY MODULE - HAMBURGER ICON, DEFAULT #### */
+.um-hamicon {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.um-hamicon-bar {
+  display: block;
+  width: 1.5rem;
+  margin-bottom: 4px;
+  height: 3px;
+  background-color: black;
+  transition: opacity 0.5s ease-out 0.1s, transform 0.25s ease-out 0.1s;
+}
+
+.um-hamicon-bar:last-child {
+  margin-bottom: 0px;
+}
+
+.um-hamicon.expanded .um-hamicon-bar-1 {
+  position: relative;
+  transform: translate(0px, 7px) rotate(-45deg);
+}
+
+.um-hamicon.expanded .um-hamicon-bar-2 {
+  opacity: 0;
+  transform: translate(0px, 16px);
+}
+
+.um-hamicon.expanded .um-hamicon-bar-3 {
+  position: relative;
+  transform: translate(0px, -7px) rotate(45deg);
+}
+
+/***  
+##########################
+GENERAL.CSS - Version 1.00
+########################## 
+- Sets general configurations for fonts and other elements.
+***/
+html * {
+  line-height: 1.5em;
+}
+
+p {
+  font-size: 1.125rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+p.read {
+  font-size: 1.3125rem;
+}
+
+.major {
+  font-size: 1.25rem;
+}
+
+.minor {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+h5 {
+  font-size: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.grid p,
+.grid h1,
+.grid h2,
+.grid h3,
+.grid h4,
+.grid h5,
+.grid h6 {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+em {
+  font-style: italic;
+}
+
+cite {
+  font-style: italic;
+}
+
+strong {
+  font-weight: 700;
+}
+
+ol {
+  font-size: 1.125rem;
+  list-style: decimal inside;
+}
+
+ol ol {
+  padding-left: 1rem;
+}
+
+ol ol ol {
+  padding-left: 2rem;
+}
+
+ul {
+  font-size: 1.125rem;
+  list-style: disc inside;
+}
+
+ul ul {
+  padding-left: 1rem;
+}
+
+ul ul ul {
+  padding-left: 2rem;
+}
+
+ol.no-style,
+ul.no-style {
+  list-style: none;
+}
+
+figcaption {
+  font-size: 1.125rem;
+}
+
+blockquote {
+  font-size: 1.125rem;
+}
+
+hr {
+  border: 1px solid black;
+  max-width: var(--row-max-width);
+  margin: 1rem auto;
+}
+
+p a {
+  color: var(--color-accent);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.icon-social {
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+/* #### LOGO Settings #### */
+
+/* If the LOGO is a text... */
+a.logo {
+  font-size: 2rem;
+}
+
+a.logo:hover {
+  text-decoration: none;
+}
+
+/* If it is an image... */
+img.logo {
+  max-height: 2rem;
+  image-rendering: optimizeQuality;
+}
+
+/***
+##########################
+##########################
+STANDARD MODULES
+##########################
+########################## 
+- Each module contains a re-usable artifact of various sizes.
+****/
+
+/***  
+##########################
+MODULE: ARTICLE  (m-article)
+########################## 
+- The standard reading article layout.
+***/
+.m-article {
+  position: relative;
+  font-family: var(--font-article);
+}
+
+/* -------- */
+/* HEADER */
+.m-article > .md-header {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: auto;
+  justify-content: start;
+}
+
+.m-article-headline {
+  position: relative;
+  grid-row: 2;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+.m-article-subline {
+  position: relative;
+  grid-row: 3;
+  color: var(--color-shade);
+  font-size: 1.3125rem;
+}
+
+/* Pre-Meta (Archive) Information*/
+.m-article-premeta {
+  position: relative;
+  grid-row: 1;
+  padding-bottom: 0.75rem;
+}
+
+.m-article-premeta-category {
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: fit-content;
+  color: var(--color-accent);
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-bottom: 0.5rem solid var(--color-accent);
+}
+
+/* Meta Information*/
+.m-article-meta {
+  position: relative;
+  grid-row: 4;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 1rem;
+  color: var(--color-shade);
+  font-weight: 600;
+}
+
+.m-article-meta-author {
+  position: relative;
+  display: inline-block;
+  color: var(--color-accent);
+}
+
+.m-article-meta-author a {
+  position: relative;
+  text-decoration: underline;
+}
+
+.m-article-meta-revision {
+  position: relative;
+  color: var(--color-accent);
+}
+
+.m-article-meta-date {
+  position: relative;
+}
+
+/* Feature Image */
+.m-article-feature {
+  position: relative;
+}
+
+.m-article-feature-figure {
+  position: relative;
+}
+
+.m-article-feature-figure img {
+  position: relative;
+  text-align: center;
+}
+
+.m-article-feature-figure figcaption {
+  position: relative;
+  margin: auto;
+  color: var(--color-shade);
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+/* -------- */
+/* CONTENT */
+
+.m-article > .md-content {
+  position: relative;
+  margin: 2rem auto;
+}
+
+/* MODULE DIVISION: Reading Area (md-read) */
+.m-article > .md-content > .md-read {
+  max-width: var(--text-max-width);
+  margin: auto;
+}
+
+.md-read p {
+  font-size: 1.3125rem;
+}
+
+.m-article > .md-content > .md-read p {
+  margin: 1em auto;
+}
+/* ---- */
+
+/* Figures */
+.m-article > .md-content figure {
+  margin: 1rem auto;
+}
+
+.m-article > .md-content figure img {
+  position: relative;
+}
+
+.m-article > .md-content figure figcaption {
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 1.125rem;
+  color: var(--color-shade);
+}
+
+/* Blockquotes */
+.m-article > .md-content > .md-read blockquote {
+  margin: 1rem auto;
+}
+
+.m-article > .md-content > .md-read .blockquote--highlight {
+  font-size: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-left: 0.5rem solid var(--color-shade);
+}
+
+.m-article > .md-content > .md-read .blockquote--quote {
+  font-size: 1.125rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Lists */
+.m-article > .md-content ul {
+  margin: 1rem auto;
+  font-size: 1.3rem;
+  list-style: disc inside;
+}
+
+.m-article > .md-content ol {
+  margin: 1rem auto;
+  font-size: 1.3rem;
+  list-style: decimal inside;
+}
+
+/* Links */
+.m-article > .md-content a {
+  color: var(--color-accent);
+}
+
+/* MODULE: (BLOG) ARTICLE-SNIPPET  (m-asnippet) */
+
+/* -------------------------- */
+
+.m-asnippet {
+  border: 1px solid black;
+}
+
+.m-asnippet-title {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  padding: 0rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.m-asnippet-meta {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  padding: 0rem 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.m-asnippet-excerpt {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  padding: 0rem 1rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--color-shade);
+}
+
+.m-asnippet-figure {
+  line-height: 0rem;
+  margin-bottom: 0.5rem;
+}
+
+/* --vertical */
+.m-asnippet--vertical {
+  position: relative;
+}
+
+.m-asnippet--vertical > .md-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.m-asnippet--vertical > .md-content .m-asnippet-title {
+  grid-row: 2;
+}
+
+.m-asnippet--vertical > .md-content .m-asnippet-figure {
+  grid-row: 1;
+}
+
+.m-asnippet--vertical > .md-content .m-asnippet-figure-image {
+  position: relative;
+}
+
+.m-asnippet--vertical > .md-content .m-asnippet-meta {
+  grid-row: 3;
+}
+
+.m-asnippet--vertical > .md-content .m-asnippet-excerpt {
+  grid-row: 4;
+}
+
+/* --nofigure */
+.m-asnippet--nofigure {
+  position: relative;
+}
+
+.m-asnippet--nofigure > .md-content .m-asnippet-title {
+  margin-top: 1rem;
+}
+
+.m-asnippet--nofigure .md-content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* --horizontal */
+.m-asnippet--horizontal {
+  position: relative;
+}
+
+.m-asnippet--horizontal > .md-content {
+  display: grid;
+  grid-template-columns: 360px auto;
+  grid-template-rows: auto auto 1fr;
+  gap: 0.5rem;
+}
+
+.m-asnippet--horizontal .m-asnippet-figure {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+  margin-bottom: 0rem;
+}
+
+.m-asnippet--horizontal .m-asnippet-figure-image {
+  max-width: 360px;
+}
+
+.m-asnippet--horizontal .m-asnippet-title {
+  padding-top: 1rem;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.m-asnippet--horizontal .m-asnippet-meta {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.m-asnippet--horizontal .m-asnippet-excerpt {
+  grid-column: 2;
+  grid-row: 3;
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 720px) {
+  .m-asnippet--horizontal > .md-content {
+    grid-template-columns: auto;
+  }
+
+  .m-asnippet--horizontal .m-asnippet-figure {
+    display: none;
+  }
+
+  .m-asnippet--horizontal .m-asnippet-figure-image {
+    display: none;
+  }
+
+  .m-asnippet--horizontal .m-asnippet-title {
+    padding-top: 1rem;
+    grid-column: 1;
+  }
+
+  .m-asnippet--horizontal .m-asnippet-meta {
+    grid-column: 1;
+  }
+
+  .m-asnippet--horizontal .m-asnippet-excerpt {
+    grid-column: 1;
+  }
+}
+
+/* ########################## */
+/* MODULE: NOTEPAD */
+/* ########################## */
+
+.m-notepad {
+  position: relative;
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.m-notepad-title {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  border-bottom: 2px solid black;
+  font-weight: 700;
+}
+
+.m-notepad-article {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  padding: 1rem 0rem 0.5rem 0rem;
+  border-bottom: 1px solid black;
+  color: var(--color-shade);
+  font-size: 1.125rem;
+}
+
+.m-notepad > .m-notepad-article:last-of-type {
+  border-bottom: 0px;
+}
+
+.m-notepad-article-date {
+  font-weight: 700;
+}
+
+/* ########################## */
+/* MODULE DIVISION: BLOG */
+/* ########################## */
+
+.md-blog {
+  position: relative;
+}
+
+/* HEADER */
+.md-blog > .md-header {
+  position: relative;
+}
+
+.md-blog-title {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  position: relative;
+}
+
+.md-blog-description {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 1.125rem;
+}
+
+/* CONTENT */
+.md-blog > .md-content {
+  position: relative;
+}
+
+/* MODULE DIVISION: Blog - Feature Article (md-content-feature) */
+.md-blog > .md-content > .md-content-feature {
+  position: relative;
+  border: 1px solid black;
+}
+
+.md-blog > .md-content > .md-content-feature .m-asnippet {
+  border: none;
+}
+/* ---- */
+
+/* MODULE DIVISION: Blog - Article Deck (md-content-deck) */
+.md-blog > .md-content > .md-content-deck {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+@media (min-width: 721px) {
+  .md-blog > .md-content > .md-content-deck .m-asnippet {
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+  }
+
+  .md-blog > .md-content > .md-content-deck .m-asnippet:last-of-type {
+    border-bottom: 0px;
+  }
+}
+
+@media (max-width: 720px) {
+  .md-blog > .md-content > .md-content-deck .m-asnippet .m-asnippet-title {
+    padding-top: 1rem;
+  }
+}
