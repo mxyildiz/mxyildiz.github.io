@@ -13,10 +13,11 @@
   <meta name="description" content="Avid Learner." />
   <meta name="keywords" content="Mehmet Yıldız" />
   <meta name="author" content="Mehmet Yıldız" />
-  <meta name="revised" content="December 30, 2022" />
+  <meta name="revised" content="January 2, 2023" />
   <!-- Internal Styles -->
-  <link rel="stylesheet" type="text/css" href="/assets/css/reset.css" />
-  <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/theme.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
   <!-- Internal Scripts -->
   <script type="text/javascript" src="/assets/js/main.js"></script>
   <!-- # EXTERNAL RESOURCES -->
@@ -33,7 +34,8 @@
         <a class="noselect logo" href="/index.html">M. Yıldız</a>
       </section>
       <section id="bh-bar-nav" class="column" aria-label="Hamburger Menu Icon">
-        <button id="bh-bar-hamicon" class="um-hamicon" onclick="togglePrimaryMenu()">
+        <button id="bh-bar-hamicon" type="button" title="Toggle Primary Menu" class="um-hamicon"
+          onclick="togglePrimaryMenu()">
           <span class="um-hamicon-bar um-hamicon-bar-1"></span>
           <span class="um-hamicon-bar um-hamicon-bar-2"></span>
           <span class="um-hamicon-bar um-hamicon-bar-3"></span>
@@ -48,21 +50,23 @@
         <section id="bh-navigation-alpha" class="column" aria-label="Services and Information">
           <ul class="menu">
             <li class="menu-item-parent"><a href="/index.html">Content</a></li>
-            <ul class="menu-submenu">
-              <li><a href="/content/circus-sideshow.html">Circus Sideshow</a></li>
-              <p>A weekly journal of ideas and reflections.</p>
-              </p>
-            </ul>
+            <li>
+              <ul class="menu-submenu">
+                <li><a href="/content/circus-sideshow.html">Circus Sideshow</a></li>
+              </ul>
+            </li>
           </ul>
         </section>
         <!-- SECTION: NAVIGATION MENU BETA -->
         <section id="bh-navigation-beta" class="column" aria-label="Publications">
           <ul class="menu">
             <li class="menu-item-parent"><a href="/about.html">About</a></li>
-            <ul class="menu-submenu">
-              <li><a href="/about.html">Information</a></li>
-              <li><a href="/about.html#contact">Contact</a></li>
-            </ul>
+            <li>
+              <ul class="menu-submenu">
+                <li><a href="/about.html">Information</a></li>
+                <li><a href="/about.html#contact">Contact</a></li>
+              </ul>
+            </li>
           </ul>
         </section>
       </div>
