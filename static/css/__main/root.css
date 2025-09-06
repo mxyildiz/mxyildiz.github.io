@@ -1,0 +1,73 @@
+/*** 
+ROOT.CSS 
+- VERSION: 240601
+- COLLECTION: ESSENTIALS
+- LOAD ORDER: CSS/A/01A
+- DESCRIPTION: Sets root variables such as width settings and colors.
+M. Yıldız 2024. All rights reserved.
+##########################
+***/
+
+/* #region # MAIN */
+
+/*** 
+# ROOT VARIABLES
+> Set Root variables such as width settings and colors.
+***/
+
+/*** 
+## VARIABLES: WIDTH
++ Media Break Points are the break points that differentiate screen sizes.
++ Text Width is the maximum ideal width of a single line of text.
++ Row Width is the maximum ideal width of a single row on a given screen.
+***/
+
+:root {
+  /* # Media Break Points */
+  /* (Note: Variables cannot be used within Media Queries) */ 
+  --media-width-c: 540px;   /* max-width */
+  --media-width-t: 800px;   /* min-width */
+  --media-width-d: 1280px;  /* min-width */
+  --media-width-hd: 1920px; /* min-width */       
+  --media-width-2k: 2560px; /* min-width */
+  --media-width-4k: 3840px; /* min-width */
+  /* Text Width */
+  --width-text: 720px;      /* max-width */
+  /* Row Width */
+  --width-row-hd: 1120px;   /* max-width */
+  --width-row-2k: 1680px;   /* max-width */
+  --width-row-4k: 2240px;   /* max-width */
+}
+
+/*** 
+## VARIABLES: COLORS
++ Black and White Colors constitute a standard five-piece black to white spectrum.
++ Background Color is the default value of the background color.
++ Color Text is the default value of the text color.
+***/
+
+:root {
+  /* Black-White Colors */
+  --color-black: #000000;
+  --color-night: #202020;
+  --color-shade: #808080;
+  --color-light: #e6e6e6;
+  --color-white: #ffffff;
+  /* Background Color */
+  --color-back: #ffffff;
+  /* Text Color */
+  --color-text: #000000;
+}
+
+/*** 
+## VARIABLES: FONTS
++ These are the default values of sans-serif and serif fonts.
+***/
+
+:root {
+  /* Fonts */
+  --font-sans: sans-serif;
+  --font-serif: serif;
+}
+
+/* #endregion */

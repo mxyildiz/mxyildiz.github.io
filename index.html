@@ -1,146 +1,307 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
-<!-- Designed and developed by M. Yıldız in 2022. -->
+<!-- © M. Yıldız 2025 – Designed and Developed by M. Yıldız in 2025. -->
 
 <head>
   <!-- Title of the Page -->
   <title>M. Yıldız</title>
   <!-- General Settings-->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Page Description -->
   <meta name="description" content="Avid Learner.">
   <meta name="keywords" content="Mehmet Yıldız">
   <meta name="author" content="Mehmet Yıldız">
   <meta name="revised" content="January 2, 2023" />
+
   <!-- Internal Styles -->
-  <link rel="stylesheet" type="text/css" href="/assets/css/reset.css">
-  <link rel="stylesheet" type="text/css" href="/assets/css/theme.css">
-  <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="./static/css/__main/reset.css" />
+  <link rel="stylesheet" type="text/css" href="./static/css/__main/root.css" />
+  <link rel="stylesheet" type="text/css" href="./static/css/__main/theme.css" />
+  <link rel="stylesheet" type="text/css" href="./static/css/__main/layout.css" />
+  <link rel="stylesheet" type="text/css" href="./static/css/__main/grid.css" />
+  <link rel="stylesheet" type="text/css" href="./static/css/__main/typography.css" />
+
+  <link rel="stylesheet" type="text/css" href="./static/css/_global/__main/header.css" />
+  <link rel="stylesheet" type="text/css" href="./static/css/_global/__main//body.css" />
+  <link rel="stylesheet" type="text/css" href="./static/css/_global/__main//footer.css" />
+
+  <link rel="stylesheet" type="text/css" href="./static/css/_global/_components/mu/mu-button--hamburger.css" />
+  <link rel="stylesheet" type="text/css" href="./static/css/_global/_components/mu/mu-menu--alpha.css" />
+
+  <link rel="stylesheet" type="text/css" href="./static/css/_utilities/__main/icon.css" />
+
+  <link rel="stylesheet" type="text/css" href="./static/css/post/__main/mp-article.css" />
 
   <!-- Internal Scripts -->
-  <script src="/assets/js/main.js"></script>
+  <script src="./static/js/__main/main.js"></script>
+  
+  <script src="./static/js/_global/__main/global_navigation.js"></script>
+
   <!-- # EXTERNAL RESOURCES -->
   <!-- Adobe Fonts-->
-  <link rel="stylesheet" type="text/css" href="https://use.typekit.net/tsn4uvn.css">
+  <link rel="stylesheet" type="text/css" href="https://use.typekit.net/tsn4uvn.css" />
 </head>
 
 <body>
-  <!-- #### HEADER -->
-  <header id="b-header" class="container">
-    <!-- SECTION: TOP BAR -->
-    <section id="bh-bar" class="row" aria-label="Brand Logo and Navigation">
-      <section id="bh-bar-brand" class="column" aria-label="Brand Logo">
-        <a class="noselect logo" href="/index.html">M. Yıldız</a>
-      </section>
-      <section id="bh-bar-nav" class="column" aria-label="Hamburger Menu Icon">
-        <button id="bh-bar-hamicon" type="button" title="Toggle Primary Menu" class="um-hamicon"
-          onclick="togglePrimaryMenu()">
-          <span class="um-hamicon-bar um-hamicon-bar-1"></span>
-          <span class="um-hamicon-bar um-hamicon-bar-2"></span>
-          <span class="um-hamicon-bar um-hamicon-bar-3"></span>
-        </button>
-      </section>
-    </section>
+  <!-- # CONTAINER: GLOBAL-HEADER -->
+  <header id="gh" class="container overflow">
 
-    <!-- NAV: PRIMARY NAVIGATION MENU -->
-    <nav id="bh-navigation" class="container" aria-label="Primary">
-      <div class="row grid two-column">
-        <!--SECTION: NAVIGATION MENU ALPHA -->
-        <section id="bh-navigation-alpha" class="column" aria-label="Services and Information">
-          <ul class="menu">
-            <li class="menu-item-parent"><a href="/index.html">Content</a></li>
-            <li>
-              <ul class="menu-submenu">
-                <li><a href="/content/circus-sideshow.html">Circus Sideshow</a></li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-        <!-- SECTION: NAVIGATION MENU BETA -->
-        <section id="bh-navigation-beta" class="column" aria-label="Publications">
-          <ul class="menu">
-            <li class="menu-item-parent"><a href="/about.html">About</a></li>
-            <li>
-              <ul class="menu-submenu">
-                <li><a href="/about.html">Information</a></li>
-                <li><a href="/about.html#contact">Contact</a></li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-      </div>
-    </nav>
-  </header>
+    <!-- WRAPPER (SECTION): GLOBAL-HEADER MAIN -->
+    <section id="ghm" class="wrapper color--night">
+      
+      <!-- STACK -->
+      <div class="stack zeromargin--vertical">
 
-  <!-- #### CONTENT -->
-  <section id="b-body" class="container" aria-label="Home Page">
-    <!-- ADD CONTENT BELOW HERE. -->
-    <section class="container" aria-label="Most Recent">
-      <div class="row grid two-column">
-        <!-- MODULE - ARTICLE SNIPPET -->
-        <article class="m-asnippet m-asnippet--vertical">
-          <div class="md-content">
-            <h3 class="m-asnippet-title"><a href="/content/circus-sideshow/log0.html">Log Zero</a></h3>
-            <a href="/content/circus-sideshow/log0.html" class="m-asnippet-figure"><img class="m-asnippet-figure-image"
-                src="/assets/visual/static/GeorgesSeurat_CircusSideshow.webp"
-                alt="Detail from Circus Sideshow (1887-88) by George Seurat, depicting a performer in front of a crowd."></a>
-            <p class="m-asnippet-meta">
-              December 31, 2022 | <a href="/content/circus-sideshow.html">Circus Sideshow</a>
-            </p>
-            <p class="m-asnippet-excerpt">
-              The examined life is worth living; but at what cost?
-            </p>
+        <!-- ROW (SECTION): GLOBAL-HEADER MAIN – Bar -->
+        <section id="ghm-bar" class="row zeromargin--vertical fullwidth">
+
+          <!-- COLUMN (DIV): GLOBAL-HEADER MAIN - Bar - Toggle Button -->
+          <div id="ghm-bar-toggle" class="column" aria-label="Toggle Button">
+
+            <!-- ELEMENT (SECTION): GLOBAL-HEADER MAIN – Bar – Toggle Button -->
+            <section class="element mu-button--hamburger">
+              <button id="js-target-main-alpha" class="mu-button--hamburger-main" type="button" title="Toggle Primary Menu"
+                aria-label="Primary Menu Toggle" onclick="togglePrimaryMenu()">
+                <span class="mu-button--hamburger-main-bar mu-button--hamburger-main-bar-1"></span>
+                <span class="mu-button--hamburger-main-bar mu-button--hamburger-main-bar-2"></span>
+                <span class="mu-button--hamburger-main-bar mu-button--hamburger-main-bar-3"></span>
+              </button>
+            </section>
+
           </div>
-        </article>
-        <!-- MODULE - NOTEPAD -->
-        <article class="m-notepad">
-          <h3 class="m-notepad-title">Notepad</h3>
-          <article class="m-notepad-article">
-            <p><span class="m-notepad-article-date">Dec 30, 2022</span> - Reading an anthology on Literary Theory edited
-              by Julie Rivkin and Michael Ryan.</p>
-            <p><span class="m-notepad-article-date">Oct 15, 2022</span> - Reading <cite>The Best American
-                Essays</cite> edited by Louis Menand. It is an interesting collection to say the least.</p>
 
-          </article>
-        </article>
+          <!-- COLUMN (DIV): GLOBAL-HEADER MAIN – Bar - Brand Logo -->
+          <div id="ghm-bar-brand" class="column" aria-label="Brand Logo">
+            
+            <!-- ELEMENT (SECTION): GLOBAL-HEADER MAIN – Bar – Brand Logo -->
+            <section class="element mn-logo-main">
+              <a class="noselect" href="/index.html">M. Yıldız</a>
+            </section>
+
+          </div>
+
+          <!-- COLUMN (DIV): GLOBAL-HEADER MAIN – Bar – Information -->
+          <div id="ghm-bar-info" class="column" aria-label="General Information">
+            
+            <!-- ELEMENT (SECTION): GLOBAL-HEADER MAIN – Bar – Information -->
+            <section class="element mn-info-main">
+              <p>Work in Progress</p>
+            </section>
+
+          </div>
+
+        </section>
+      
       </div>
-    </section>
-    <hr>
-    <!-- END CONTENT ABOVE THE LINE. -->
-  </section>
 
-  <!-- #### FOOTER -->
-  <footer id="b-footer" class="container">
-    <div id="bf-bar" class="row grid two-column">
-      <section id="bf-bar-social" aria-label="Brand Logo and Social Media">
-        <a id="bf-bar-social-brand" class="noselect logo" href="/index.html">M. Yıldız</a>
-        <div id="bf-bar-social-media">
-          <a href="https://facebook.com/myildizx" target="_blank"><img class="bf-bar-social-media-icon icon-social"
-              src="/assets/visual/icons/social/facebook.svg" alt="Facebbok Icon"></a>
-          <a href="https://twitter.com/myildizx" target="_blank"><img class="bf-bar-social-media-icon icon-social"
-              src="/assets/visual/icons/social/twitter.svg" alt="Twitter Icon"></a>
-          <a href="https://instagram.com/myildizx" target="_blank"><img class="bf-bar-social-media-icon icon-social"
-              src="/assets/visual/icons/social/instagram.svg" alt="Instagram Icon"></a>
-          <a href="https://www.youtube.com/@myildizx" target="_blank"><img class="bf-bar-social-media-icon icon-social"
-              src="/assets/visual/icons/social/youtube.svg" alt="YouTube Icon"></a>
-          <a href="https://twitch.tv/xmpluto" target="_blank"><img class="bf-bar-social-media-icon icon-social"
-              src="/assets/visual/icons/social/twitch.svg" alt="Twitch Icon"></a>
+    </section> <!-- END: GLOBAL-HEADER MAIN -->
+
+    <!-- WRAPPER (SECTION): GLOBAL-HEADER NAVIGATION -->
+    <section id="ghn" class="wrapper">
+      
+      <!-- STACK -->
+      <div class="stack">
+
+        <!-- ROW (NAV): GLOBAL-HEADER NAVIGATION - Bar -->
+        <nav id="ghn-bar" class="row fullwidth grid grid--84" aria-label="Primary">
+
+            <!-- COLUMN (DIV): GLOBAL-HEADER NAVIGATION - Bar – About -->
+          <div id="ghn-bar-about" class="column" aria-label=" About">
+
+            <!-- ELEMENT (MENU): GLOBAL-HEADER NAVIGATION - Bar – About -->          
+              <menu class="element mu-menu--alpha">
+                <li class="mu-menu--alpha-item-parent">
+                  <a href="#">About</a>
+                </li>
+                <li>
+                  <ul class="mu-menu--alpha-submenu">
+                    <li>
+                      <span class="paragraph">
+                        I am an <strong>Assistant Professor of English Language and Literature</strong> at Bilkent University.<br>
+                        I also serve as a <strong>Managing Editor</strong> of <a style="text-decoration: underline" 
+                        href="https://brill.com/view/journals/jwl/jwl-overview.xml" target="_blank">Journal of World Literature</a>.<br>
+                      </span>
+                    </li>
+                  </ul>
+                </li>
+              </menu>
+
+          </div>
+
+          <!-- COLUMN (DIV): GLOBAL-HEADER NAVIGATION - Bar – Series -->
+          <div id="ghn-bar-series" class="column" aria-label="Series">
+
+            <!-- ELEMENT (MENU): GLOBAL-HEADER NAVIGATION - Bar – Series -->
+            <menu class="element mu-menu--alpha">
+              <li class="mu-menu--alpha-item-parent">
+                <a href="#">Series</a>
+              </li>
+              <li>
+                <ul class="mu-menu--alpha-submenu">
+                  <li>
+                    <a href="#">Circus Sideshow</a><br>
+                    <span class="paragraph" style="font-style: italic;">Coming Soon...</span>
+                  </li>
+                </ul>
+              </li>
+              
+            </menu>
+
+          </div>
+
+        </nav>
+
+      </div>
+
+    </section> <!-- END: GLOBAL-HEADER NAVIGATION -->
+
+  </header> 
+  <!-- # END: GLOBAL-HEADER -->
+
+  <!-- ==== ==== ==== ==== -->
+
+  <!-- # CONTAINER: GLOBAL BODY -->
+  <section id="gb" class="container">
+    
+    <!-- CONTAINER: MAIN -->
+    <article class="container main">
+      
+      <!-- WRAPPER: MAIN -->
+      <section class="wrapper main">
+        
+        <!-- STACK -->
+        <div class="stack">
+        
+          <!-- ROW (SECTION): Content -->
+          <section class="row grid grid--48" style="max-width: 1080px;">
+
+             <!-- COLUMN (SECTION):  -->
+             <section class="column">
+
+              <!-- ELEMENT (SECTION): Content -->
+              <section class="container read">
+                <img src="./static//asset/image/_Profile.jpg" alt="Yıldız Portrait"
+                  style="width:100%; height:auto; image-rendering: optimizeQuality;" />
+              </section>
+            
+            </section>
+            
+            <!-- COLUMN (SECTION):  -->
+            <section class="column">
+
+              <!-- ELEMENT (SECTION): Content -->
+              <section class="container read">
+                <h1>Hello world,</h1>
+                <br>
+                <p>
+                  I am an <strong>Assistant Professor of English Language and Literature</strong> at Bilkent University.
+                  I also serve as a <strong>Managing Editor</strong> of <a style="text-decoration: underline" 
+                  href="https://brill.com/view/journals/jwl/jwl-overview.xml" target="_blank">Journal of World Literature</a>.
+                </p>
+                <br>
+                <p>
+                  I hold a <strong>PhD in Comparative Literature</strong> from Harvard University 
+                  and a <strong>BA in Philosophy</strong> from Yale University.
+                  Attached here is a copy of my <a style="text-decoration: underline;">Curriculum Vitae</a>.
+                </p>
+                <br>
+                <p>
+                  This is my personal website where I hope to share my thoughts on literature, philosophy, social sciences, 
+                  and other topics that interest me, as well as my academic publications and projects.
+                </p>
+                <br>
+                <p>
+                  For contact, please use one of my e-mail addresses available online.
+                </p>
+                <br>
+                <p>
+                  Warm wishes,
+                  <br>
+                  M. Yıldız
+                </p> 
+              </section>
+            
+            </section>
+          
+          </section>
+        
         </div>
+
       </section>
-      <section id="bf-bar-legal" aria-label="Legal Information">
-        <p id="bf-bar-legal-copyright">
-          © Mehmet Yıldız 2022. All rights reserved.<br>
-          The material on this site may not be reproduced, distributed, transmitted, cached or otherwise used, except
-          with the prior written permission of the authors.
-        </p>
-        <p id="bf-bar-legal-cookie"><a href="#b-header">This personal website uses a small amount of
-            cookies.</a></p>
-      </section>
-    </div>
-  </footer>
+      
+    </article>
+    <!-- ## END ARTICLE -->
+  
+  </section> 
+  <!-- # END: GLOBAL BODY -->
+
+  <!-- ==== ==== ==== ==== -->
+
+  <!-- # CONTAINER: GLOBAL-FOOTER -->
+  <footer id="gf" class="container">
+  
+    <!-- WRAPPER (SECTION): GLOBAL-FOOTER MAIN -->
+    <section id="gfm" class="wrapper color--night">
+  
+      <!-- STACK -->  
+      <div class="stack">
+  
+        <!-- ROW (SECTION): GLOBAL-FOOTER MAIN – Bar -->
+        <section id="gfm-bar" class="row fullwidth grid grid--66">
+  
+          <!-- COLUMN (DIV): GLOBAL-FOOTER MAIN - Bar - Brand Information -->
+          <div id="gfm-bar-brand" class="column" aria-label="Social Information">
+  
+            <!-- ELEMENT (SECTION): GLOBAL-FOOTER MAIN - Bar - Brand Information - Brand Logo -->
+            <section class="element mn-logo-main" aria-label="Brand Logo">
+              <a class="noselect" href="/index.html">M. Yıldız</a>
+            </section>
+  
+            <!-- ELEMENT (SECTION): GLOBAL-FOOTER MAIN - Bar - Brand Information - Social Media -->
+            <section class="element mn-social" aria-label="Social Media Information">
+              <a href="https://www.youtube.com/#" target="_blank"><img class="icon-social"
+                src="./static/asset/icon/social/youtube.svg" alt="YouTube Icon"></a>
+              <a href="https://twitter.com/#" target="_blank"><img class="icon-social"
+                  src="./static/asset/icon/social/twitter.svg" alt="Twitter Icon"></a>
+              <a href="https://instagram.com/#" target="_blank"><img class="icon-social"
+                  src="./static/asset/icon/social/instagram.svg" alt="Instagram Icon"></a>
+              <a href="https://twitch.tv/#" target="_blank"><img class="icon-social"
+                  src="./static/asset/icon/social/twitch.svg" alt="Twitch Icon"></a>
+            </section>
+  
+          </div>
+          
+          <!-- COLUMN (DIV): GLOBAL-FOOTER MAIN - Bar - Legal Information -->
+          <div id="gfm-bar-legal" class="column" aria-label="Legal Information">
+  
+            <!-- ELEMENT (SECTION): GLOBAL-FOOTER MAIN - Bar - Legal Information - Copyright -->
+            <section class="element mn-info-copyright" aria-label="Copyright Information">
+              <p>
+                © M. Yıldız 2025. All rights reserved.<br>
+                The material on this site may not be reproduced, distributed, transmitted, cached or otherwise
+                used, except with the prior written permission of the authors.
+              </p>
+            </section>
+  
+            <!-- ELEMENT (SECTION): GLOBAL-FOOTER MAIN - Bar - Legal Information - Cookie -->  
+            <section class="element mn-info-cookie" aria-label="Cookie Information">
+              <p>
+                <a href="#">This website may use a small number of cookies.</a>
+              </p>
+            </section>
+  
+          </div>
+  
+        </section>
+      
+      </div>
+  
+    </section> <!-- END: GLOBAL-FOOTER MAIN -->
+  
+  </footer> 
+  <!-- # END: GLOBAL-FOOTER -->
+
 </body>
-<!-- #### END DOCUMENT. -->
 
 </html>

@@ -1,0 +1,46 @@
+/* #region mu-menu--alpha */
+/* ########################## */
+/* Styles for the local component: MENU. */
+/* M. Yıldız 2024. All rights reserved. */
+
+/* #region # MAIN */
+/* ########################## */
+
+.mu-menu--alpha {
+  position: relative;
+}
+
+.mu-menu--alpha > .mu-menu--alpha-item-parent {
+  margin-bottom: 1rem;
+  border-bottom: 0.25rem solid var(--color-white);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.mu-menu--alpha > .mu-menu--alpha-item-parent > a:hover {
+  opacity: 0.85;
+  text-decoration: none;
+}
+
+.mu-menu--alpha .mu-menu--alpha-submenu {
+  margin-bottom: 1rem;
+  list-style: none;
+}
+
+.mu-menu--alpha .mu-menu--alpha-submenu li {
+  margin-bottom: 0.25rem;
+  font-size: 1.167rem;
+  font-weight: 600;
+}
+
+.mu-menu--alpha .mu-menu--alpha-submenu li:has(span) {
+  margin-bottom: 0.5rem;
+}
+
+.mu-menu--alpha .mu-menu--alpha-submenu span.paragraph {
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
+  color: var(--color-light);
+  font-size: 1rem;
+  font-weight: 400;
+}

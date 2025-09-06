@@ -1,0 +1,205 @@
+/*** 
+LAYOUT.CSS 
+- VERSION: 240601
+- COLLECTION: ESSENTIALS
+- LOAD ORDER: CSS/A/02A
+- DESCRIPTION: Sets standard wrappers, containers, stacks, rows, and columns.
+M. Yıldız 2024. All rights reserved.
+##########################
+***/
+
+/* #region # MAIN */
+
+/*** 
+# STANDARD BUILDING BLOCKS 
++ Container is a generic element containing multiple elements.
++ Wrapper is a generic element wrapping another single element.
++ Stack is the largest layout element, and the default option provides horizontal margins.
++ Row is placed within a stack, and the default option provides vertical margins.
++ Column is placed within a row, and it acts as a wrapper/container.
++ Element is a generic wrapper/container for a single element.
+***/
+
+/***
+## CONTAINER 
+- Container is a generic element containing multiple elements.
+***/
+
+.container {
+  /* Disposition */
+  display: block;
+  position: relative;
+  overflow: hidden;
+  /* Box Model */
+  max-width: 100%;
+  margin: 0rem 0rem;
+  padding: 0rem 0rem;
+}
+
+/*** 
+### Modifiers
+***/
+
+.container.overflow {
+  overflow: visible;
+}
+
+/*** 
+## WRAPPER
+- Wrapper is a generic element wrapping another single element.
+***/
+
+.wrapper {
+  /* Disposition */
+  display: block;
+  position: relative;
+  overflow: hidden;
+  /* Box Model */
+  max-width: 100%;
+  margin: 0rem 0rem;
+  padding: 0rem 0rem;
+}
+
+/*** 
+### Modifiers
+***/
+
+.wrapper.overflow {
+  overflow: visible;
+}
+
+/*** 
+## STACK
+- Stack is a generic element that provides vertical and horizontal margins.
+- Each stack should be placed inside either a container or a wrapper.
+- Each stack should contain at least one row.
+***/
+
+.stack {
+  /* Disposition */
+  display: block;
+  position: relative;
+  /* Box Model */
+  max-width: 100%;
+  margin: 2rem 2rem;
+  padding: 0rem 0rem;
+}
+
+/*** 
+### Modifiers
+***/
+
+/* > Override standard stack to remove the margins. */
+.stack.zeromargin {
+  margin: 0rem 0rem;
+}
+
+/* > Override standard stack to remove the horizontal margins. */
+.stack.zeromargin--horizontal {
+  margin: 2rem 0rem;
+}
+
+/* > Override standard stack to remove the vertical margins. */
+.stack.zeromargin--vertical {
+  margin: 0rem 2rem;
+}
+
+/*** 
+## ROW
+- Row is a generic grid that provides vertical margins.
+***/
+
+.row {
+  /* Disposition */
+  display: grid;
+  position: relative;
+  /* Box Model */
+  margin: 2rem auto;
+  /* Grid & Flexbox */
+  grid-template-rows: repeat(1, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  grid-row-gap: 2rem;
+  grid-column-gap: 2rem;
+}
+
+/*** 
+### Media-Queries
+***/
+@media (min-width: 0px) {
+  .row {
+    max-width: var(--width-row-hd);
+  }
+}
+
+@media (min-width: 2560px) {
+  .row {
+    max-width: var(--width-row-2k);
+  }
+}
+
+@media (min-width: 3840px) {
+  .row {
+    max-width: var(--width-row-4k)
+  }
+}
+
+/*** 
+### Modifiers 
+***/
+
+/* > Override standard row to remove the margins. */
+.row.zeromargin {
+  margin: 0rem 0rem;
+}
+
+/* > Override standard row to remove the horizontal margins. */
+.row.zeromargin--horizontal {
+  margin: 2rem 0rem;
+}
+
+/* > Override standard row to remove the vertical margins. */
+.row.zeromargin--vertical {
+  margin: 0rem auto;
+}
+
+/* > Override standard row to remove the max-width setting. */
+.row.fullwidth {
+  max-width: 100%;
+}
+
+/***
+## COLUMN 
+- Column is placed within a row, and it acts as a wrapper/container.
+***/
+
+.column {
+  /* Disposition */
+  display: flex;
+  position: relative;
+  /* Box Model */
+  width: 100%;
+  margin: 0rem 0rem;
+  padding: 0rem 0rem;
+  /* Grid & Flexbox */
+  flex-direction: column;
+  justify-content: flex-start;
+  row-gap: 1rem;
+}
+
+/*** 
+## ELEMENT
+- Element is a generic wrapper for a single element.
+***/
+
+.element {
+  /* Disposition */
+  display: block;
+  position: relative;
+  overflow: hidden;
+  /* Box Model */
+  max-width: 100%;
+  margin: 0rem 0rem;
+  padding: 0rem 0rem;
+}
+
+/* #endregion */

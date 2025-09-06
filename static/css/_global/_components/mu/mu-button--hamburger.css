@@ -1,0 +1,69 @@
+/*** MU-BUTTON--HAMBURGER.CSS v1.0 (last updated June 2024)
+- This is Utility Module (MU); a button in the form of a hamburger.
+M. Yıldız 2024. All rights reserved.
+##########################
+***/
+
+/* #region # MAIN */
+/* ########################## */
+
+.mu-button--hamburger-main {
+  /* Disposition */
+  position: relative;
+  /* Box Model */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  /* Other */
+  cursor: pointer;
+}
+
+/* #region ## INDIVIDUAL BARS */
+/* ########################## */
+
+.mu-button--hamburger-main-bar {
+  /* Disposition */
+  display: block;
+  position: relative;
+  /* Box Model */
+  width: 1.5rem;
+  height: 3px;
+  margin-bottom: 4px;
+  /* Color & Background */
+  color: var(--color-white);
+  background-color: var(--color-white);
+  /* Transition & Animation */
+  transition: opacity 0.5s ease-out 0.1s, transform 0.25s ease-out 0.1s;
+}
+
+.mu-button--hamburger-main-bar:last-child {
+  /* Disposition */
+  position: relative;
+  /* Box Model */
+  margin-bottom: 0px;
+}
+
+.mu-button--hamburger-main.expanded .mu-button--hamburger-main-bar-1 {
+  /* Disposition */
+  position: relative;
+  /* Transition & Animation */
+  transform: translate(0px, 7px) rotate(-45deg);
+}
+
+.mu-button--hamburger-main.expanded .mu-button--hamburger-main-bar-2 {
+  /* Disposition */
+  position: relative;
+  opacity: 0;
+  /* Transition & Animation */
+  transform: translate(0px, 16px);
+}
+
+.mu-button--hamburger-main.expanded .mu-button--hamburger-main-bar-3 {
+  /* Disposition */
+  position: relative;
+  /* Transition & Animation */
+  transform: translate(0px, -7px) rotate(45deg);
+}
+
+/* #endregion */
+
+/* #endregion */

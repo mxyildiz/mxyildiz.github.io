@@ -1,0 +1,46 @@
+/*** 
+BODY.CSS 
+- VERSION: 240601
+- COLLECTION: GLOBAL
+- LOAD ORDER: CSS/B/02
+- DESCRIPTION: Main Body CSS.
+M. Yıldız 2024. All rights reserved.
+##########################
+***/
+
+/* #region # CONTAINER: GLOBAL BODY */
+/* ########################## */
+
+/*** 
+# STANDARD BUILDING BLOCKS 
+- GB is a generic Ccontainer containing page body, in the middle between header and footer.
+***/
+
+#gb {
+  /* Disposition */
+  position: relative;
+  /* Box Model */
+  min-height: calc(100vh - (247px));  
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* ## Modifiers */
+
+/* > Override standard body to remove the margins. */
+#gb .zeromargin {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+/* > Override standard stack to remove the top margin. */
+#gb .zeromargin--top {
+  margin-top: 0rem;
+}
+
+/* > Override standard stack to remove the bottom margin. */
+#gb .zeromargin--bottom {
+  margin-bottom: 0rem;
+}
+
+/* #endregion */

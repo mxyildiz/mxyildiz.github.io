@@ -1,0 +1,126 @@
+/*** 
+FOOTER.CSS 
+- VERSION: 240601
+- COLLECTION: GLOBAL
+- LOAD ORDER: CSS/B/03
+- DESCRIPTION: Global Header CSS.
+M. Yıldız 2024. All rights reserved.
+##########################
+***/
+
+/* #region # CONTAINER: GLOBAL FOOTER */
+/* ########################## */
+
+#gf {
+  /* Disposition */
+  position: relative;
+  /* Color & Background */
+  background-color: var(--color-night);
+  color: white;
+}
+
+/* #region ## WRAPPER (SECTION): GLOBAL FOOTER MAIN */
+/* ########################## */
+
+/* WRAPPER (SECTION): GLOBAL FOOTER MAIN */
+#gfm {
+  /* Disposition */
+  position: relative;
+  /* Color and Background */
+  background-color: var(--color-night);
+  color: white;
+}
+
+/* STACK */
+#gfm > .stack {
+  /* Disposition */
+  position: relative;
+}
+
+/* ROW (SECTION): GLOBAL FOOTER MAIN – Bar */
+#gfm-bar {
+  /* Disposition */
+  position: relative;
+}
+
+/* COLUMN (SECTION): GLOBAL FOOTER MAIN - Bar - Brand Information */
+#gfm-bar-brand {
+  /* Typography */
+  text-align: center;
+}
+
+/* ELEMENT (SECTION): GLOBAL FOOTER MAIN - Bar - Brand Information - Brand Logo */
+#gfm-bar-brand .mn-logo-main {
+  /* Disposition */
+  position: relative;
+}
+
+#gfm-bar-brand .mn-logo-main a {
+  /* Disposition */
+  position: relative;
+  /* Typography */
+  font-family: var(--font-serif);
+  font-size: 2rem;
+}
+
+#gfm-bar-brand .mn-logo-main a:hover {
+  /* Typography */
+  text-decoration: none;
+}
+
+/* ELEMENT (SECTION): GLOBAL FOOTER MAIN - Bar - Brand Information - Social Media */
+#gfm-bar-brand .mn-social {
+  /* Disposition */
+  display: flex;
+  /* Grid & Flexbox */ 
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1.5rem;
+}
+
+/* COLUMN (SECTION): GLOBAL FOOTER MAIN - Bar - Middle Information */
+#gfm-bar-middle {
+  /* Typography */
+  text-align: center;
+}
+
+/* ELEMENT (SECTION): GLOBAL FOOTER MAIN - Bar - Brand Information - Social Media */
+#gfm-bar-middle .mn-info-main {
+  /* Disposition */
+  position: relative;
+}
+
+/* COLUMN (SECTION): GLOBAL FOOTER MAIN - Bar - Legal Information */
+#gfm-bar-legal {
+  /* Typography */
+  text-align: center;
+}
+
+/* ELEMENT (SECTION): GLOBAL FOOTER MAIN - Bar - Legal Information - Copyright */
+#gfm-bar-legal .mn-info-copyright {
+  /* Disposition */
+  position: relative;
+  /* Box Model */
+  max-width: calc(var(--width-text) / 2);
+  margin: auto;
+  /* Typography */
+  font-size: 0.875rem;
+}
+
+/* ELEMENT (SECTION): GLOBAL FOOTER MAIN - Bar - Legal Information - Cookie */
+#gfm-bar-legal .mn-info-cookie {
+  /* Disposition */
+  position: relative;
+  /* Box Model */
+  max-width: calc(var(--width-text) / 2);
+  margin: auto;
+  /* Typography */
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* #endregion */
+
+/* #endregion */

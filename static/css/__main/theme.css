@@ -1,0 +1,77 @@
+/*** 
+THEME.CSS 
+- VERSION: 240601
+- COLLECTION: ESSENTIALS
+- LOAD ORDER: CSS/A/01B
+- DESCRIPTION: Features theme colors and fonts at the root; and sets colors.
+M. Yıldız 2024. All rights reserved.
+##########################
+***/
+
+/* #region # MAIN */
+
+/*** 
+# ROOT VARIABLES
+> Set Root variables such as width settings and colors.
+***/
+
+/*** 
+## VARIABLES: COLORS
++ Brand Colors are the colors of the brand.
++ Theme Colors are the colors of the theme.
++ Background Color is the theme value of the background color.
++ Text Color is the theme value of the text color. 
+***/
+
+:root {
+  /* Brand Colors */
+  --color-brand: #971b2f;
+  --color-accent: #971b2f;
+  --color-high: rgba(151, 27, 47, 0.7); /* Highlight Color */
+  /* Theme Colors */
+  --color-theme-alpha: #faeee5;
+  --color-theme-beta: #faeee5;
+  --color-theme-gamma: #faeee5;
+  /* Background & Text Colors */
+  --color-back: #ffffff;
+  --color-text: #000000;
+}
+
+/*** 
+## VARIABLES: FONTS
++ These are the default values of sans-serif and serif fonts.
+***/
+
+:root {
+  /* Fonts */
+  --font-sans: "futura-pt", sans-serif;
+  --font-serif: "adobe-caslon-pro", "Times New Roman", serif;
+}
+
+/* #endregion */
+
+/* #region # HTML */
+
+/*** 
+# HTML SETUP
+> Set HTML Disposition, Background and Highlight colors.
+***/
+
+html {
+  /* Disposition */
+  display: block;
+  position: static;
+  overflow-y: scroll;
+}
+
+html {
+  /* Color & Background */
+  background-color: var(--color-back);
+}
+
+html ::selection {
+  /* Color & Background */
+  background-color: var(--color-high);
+}
+
+/* #endregion */

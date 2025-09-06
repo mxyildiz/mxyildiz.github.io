@@ -1,0 +1,213 @@
+/*** 
+HEADER.CSS 
+- VERSION: 240601
+- COLLECTION: GLOBAL
+- LOAD ORDER: CSS/B/01
+- DESCRIPTION: Global Header CSS.
+M. Yıldız 2024. All rights reserved.
+##########################
+***/
+
+/* #region # CONTAINER: GLOBAL HEADER */
+/* ########################## */
+
+/* CONTAINER: GLOBAL HEADER */
+#gh {
+  /* Disposition */
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* #region ## WRAPPER (SECTION): GLOBAL HEADER MAIN */
+/* ########################## */
+
+/* WRAPPER (SECTION): GLOBAL HEADER MAIN */
+#ghm {
+  /* Disposition */
+  position: relative;
+  /* Color & Background */
+  color: var(--color-white);
+  background-color: var(--color-night);
+}
+
+/* STACK */
+#ghm > .stack {
+  /* Disposition */
+  position: relative;
+}
+
+/* ROW (SECTION): GLOBAL HEADER MAIN – Bar */
+#ghm-bar {
+  /* Disposition */
+  display: grid;
+  position: relative;
+  /* BOX Model */
+  padding-top: 0.5rem;
+  /* Grid and Flexbox */
+  grid-template-columns: auto auto 1fr;
+  grid-column-gap: 1rem;
+}
+
+@media (max-width: 540px) {
+  #ghm-bar {
+    /* Grid & Flexbox */  
+    grid-template-columns: 1fr auto;
+  }
+}
+
+/* COLUMN (SECTION): GLOBAL HEADER MAIN - Bar - Toggle Button */
+#ghm-bar-toggle {
+  /* Disposition */
+  position: relative;
+  /* Grid & Flexbox */
+  grid-row: 1;
+  grid-column: 1;
+}
+
+@media (max-width: 540px) {
+  #ghm-bar-toggle {
+    /* Grid & Flexbox */
+    grid-column: 2;
+  }
+}
+
+/* COLUMN (SECTION): GLOBAL HEADER MAIN – Bar - Brand Logo */
+#ghm-bar-brand {
+  /* Disposition */
+  position: relative;
+  /* BOX Model */
+  margin-top: 6px;
+  /* Grid & Flexbox */
+  grid-row: 1;
+  grid-column: 2;
+}
+
+@media (max-width: 540px) {
+  #ghm-bar-brand {
+    /* Grid & Flexbox */
+    grid-column: 1;
+  }
+}
+
+/* ELEMENT (SECTION): GLOBAL HEADER MAIN - Bar - Brand Logo */
+#ghm-bar-brand .mn-logo-main {
+  /* Disposition */
+  position: relative;
+}
+
+#ghm-bar-brand .mn-logo-main a {
+    /* Disposition */
+    position: relative;
+    /* Typography */
+    font-family: var(--font-serif);
+    font-size: 2rem;
+}
+
+#ghm-bar-brand .mn-logo-main a:hover {
+  text-decoration: none;
+}
+
+/* COLUMN (SECTION): GLOBAL HEADER MAIN – Bar – Information */
+#ghm-bar-info {
+  /* Disposition */
+  position: relative;
+  /* Grid & Flexbox */
+  grid-row: 1;
+  grid-column: 3;
+}
+
+@media (max-width: 540px) {
+  #ghm-bar-info {
+    /* Disposition */
+    display: none;
+  }
+}
+
+/* ELEMENT (SECTION): GLOBAL HEADER MAIN - Bar - Information */
+#ghm-bar-info .mn-info-main {
+  /* Disposition */
+  position: relative;
+  /* BOX Model */
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  /* Typography */
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: right;
+}
+
+/* #endregion */
+
+/* #region ## WRAPPER (SECTION): GLOBAL HEADER NAVIGATION */
+/* ########################## */
+
+/* WRAPPER (SECTION): GLOBAL HEADER NAVIGATION */
+#ghn {
+  /* Disposition */
+  position: absolute;
+  left: -100vw;
+  opacity: 0;
+  z-index: 10;
+  overflow-y: auto;
+  /* BOX Model */
+  width: 100%;
+  max-height: calc(100vh - 72px);
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  /* Color & Background */
+  color: var(--color-white);
+  background-color: var(--color-night);
+  /* Transition & Animation */
+  transition: opacity 0.25s ease-out, transform 0.25s step-end;
+}
+
+/* Modifiers: Animation Effect */
+#ghn.visible {
+  /* Transition & Animation */
+  opacity: 1;
+  transform: translateX(calc(100vw));
+  transition: opacity 0.25s ease-in, transform 0.25s step-start;
+}
+
+/* STACK */
+#ghn > .stack {
+  /* Disposition */
+  position: relative;
+}
+
+/* ROW (NAV): GLOBAL HEADER NAVIGATION - Bar */
+#ghn-bar {
+  /* Disposition */
+  position: relative;
+}
+
+/* COLUMN (SECTION): GLOBAL HEADER NAVIGATION - Bar – Series */
+#ghn-bar-series {
+  /* Disposition */
+  position: relative;
+}
+
+/* COLUMN (SECTION): GLOBAL HEADER NAVIGATION - Bar – Topics */
+#ghn-bar-archive {
+  /* Disposition */
+  position: relative;
+}
+
+/* COLUMN (SECTION): GLOBAL HEADER NAVIGATION - Bar – Content */
+#ghn-bar-content {
+  /* Disposition */
+  position: relative;
+}
+
+/* COLUMN (SECTION): GLOBAL HEADER NAVIGATION - Bar – About */
+#ghn-bar-about {
+  /* Disposition */
+  position: relative;
+}
+
+/* #endregion */
+
+/* #endregion */
+
+

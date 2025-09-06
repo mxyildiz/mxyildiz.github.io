@@ -1,0 +1,64 @@
+/*** EFFECTS.CSS v1.0 (last updated January 2024)
+> Sets general animation, transition effects.
+M. Yıldız 2024. All rights reserved.
+##########################
+***/
+
+/* #region MAIN */
+/* ########################## */
+
+/* #region UNDERLINE ANIMATION */
+/***
+Underline animation on hover.
+***/
+
+.underline {
+  background-image: linear-gradient(180deg,
+      transparent 45%,
+      var(--color-selection) 45% 80%,
+      transparent 80%);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size 0.4s ease;
+}
+
+.underline:hover {
+  background-size: 100% 100%;
+  text-decoration: none;
+}
+
+.underline--c_alpha {
+  background-image: linear-gradient(180deg,
+      transparent 45%,
+      rgba(40, 226, 70, 0.6) 45% 80%,
+      transparent 80%);
+}
+
+/* #region TYPING ANIMATION */
+/***
+Typing animation for texts.
+***/
+
+.typewriter {
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  animation: aheader-typing 1s steps(40, end) forwards;
+}
+
+@keyframes aheader-typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/*#endregion */
+
+/*#endregion */

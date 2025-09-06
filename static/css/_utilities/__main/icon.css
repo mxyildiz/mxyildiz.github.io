@@ -1,0 +1,65 @@
+/*** ICON.CSS v1.0 (last updated January 2023)
+Features icon settings and resources.
+M. Yıldız 2024. All rights reserved.
+##########################
+***/
+
+/***
+ # General Settings
+ ***/
+.icon {
+  position: relative;
+  display: inline-block;
+  margin-right: 0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: black;
+  cursor: none;
+}
+
+/***
+ # Social Media Icons 
+ ***/
+.icon-social {
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+/***
+ # Span Classes
+ ***/
+.icon-caret-left {
+  mask: url(/static/visual/icons/primitive/caret-left.svg) no-repeat center;
+  -webkit-mask: url(/static/visual/icons/primitive/caret-left.svg) no-repeat
+    center;
+}
+
+.icon-chevron-left {
+  mask: url(/static/visual/icons/primitive/chevron-left.svg) no-repeat center;
+  -webkit-mask: url(/static/visual/icons/primitive/chevron-left.svg) no-repeat
+    center;
+}
+
+.icon-square{
+  mask: url(/static/visual/icons/primitive/square.svg) no-repeat center;
+  -webkit-mask: url(/static/visual/icons/primitive/square.svg) no-repeat
+    center;
+}
+
+.icon-pen-nib {
+  mask: url(/static/visual/icons/primitive/pen-nib.svg) no-repeat center;
+  -webkit-mask: url(/static/visual/icons/primitive/pen-nib.svg) no-repeat
+    center;
+}
+
+.icon-tape {
+  mask: url(/static/visual/icons/primitive/tape.svg) no-repeat center;
+  -webkit-mask: url(/static/visual/icons/primitive/tape.svg) no-repeat
+    center;
+}
+
+.icon-calendar-days{
+  mask: url(/static/visual/icons/primitive/calendar-days.svg) no-repeat center;
+  -webkit-mask: url(/static/visual/icons/primitive/calendar-days.svg) no-repeat
+    center;
+}
