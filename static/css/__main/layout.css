@@ -111,15 +111,10 @@ M. Yıldız 2024. All rights reserved.
 
 .row {
   /* Disposition */
-  display: grid;
+  display: block;
   position: relative;
   /* Box Model */
   margin: 2rem auto;
-  /* Grid & Flexbox */
-  grid-template-rows: repeat(1, 1fr);
-  grid-template-columns: repeat(1, 1fr);
-  grid-row-gap: 2rem;
-  grid-column-gap: 2rem;
 }
 
 /*** 
@@ -178,6 +173,7 @@ M. Yıldız 2024. All rights reserved.
   position: relative;
   /* Box Model */
   width: 100%;
+  min-width: 0;
   margin: 0rem 0rem;
   padding: 0rem 0rem;
   /* Grid & Flexbox */
