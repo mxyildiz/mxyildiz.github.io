@@ -1,1 +1,3 @@
-/* M. Yıldız 2024. All rights reserved. */
+/* ... */
+
+
