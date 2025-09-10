@@ -203,6 +203,15 @@ hr {
 /* #region UTILITIES */
 
 /***
+# READ Settings 
+***/
+
+/* > If it is an image... */
+.read {
+  font-size: 1.25rem;
+}
+
+/***
 # LOGO Settings 
 ***/
 
