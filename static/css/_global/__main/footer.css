@@ -3,14 +3,14 @@ FOOTER.CSS
 - VERSION: 240601
 - COLLECTION: GLOBAL
 - LOAD ORDER: CSS/B/03
-- DESCRIPTION: Global Header CSS.
-M. Yıldız 2024. All rights reserved.
+- DESCRIPTION: Global Footer CSS.
 ##########################
 ***/
 
 /* #region # CONTAINER: GLOBAL FOOTER */
 /* ########################## */
 
+/* CONTAINER: GLOBAL FOOTER */
 #gf {
   /* Disposition */
   position: relative;

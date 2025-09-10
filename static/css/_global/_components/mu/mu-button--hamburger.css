@@ -1,11 +1,13 @@
 /*** MU-BUTTON--HAMBURGER.CSS v1.0 (last updated June 2024)
-- This is Utility Module (MU); a button in the form of a hamburger.
-M. Yıldız 2024. All rights reserved.
+- This is a Utility Module (MU); a button in the form of a hamburger.
+- An active template is available within Header.html.
 ##########################
 ***/
 
 /* #region # MAIN */
 /* ########################## */
+
+/* # MAIN */
 
 .mu-button--hamburger-main {
   /* Disposition */
@@ -17,8 +19,7 @@ M. Yıldız 2024. All rights reserved.
   cursor: pointer;
 }
 
-/* #region ## INDIVIDUAL BARS */
-/* ########################## */
+/* ## INDIVIDUAL BARS */
 
 .mu-button--hamburger-main-bar {
   /* Disposition */
@@ -63,7 +64,5 @@ M. Yıldız 2024. All rights reserved.
   /* Transition & Animation */
   transform: translate(0px, -7px) rotate(45deg);
 }
-
-/* #endregion */
 
 /* #endregion */

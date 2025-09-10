@@ -1,15 +1,13 @@
-/*** EFFECTS.CSS v1.0 (last updated January 2024)
+/*** ANIMATION.CSS v1.0 (last updated January 2024)
 > Sets general animation, transition effects.
-M. Yıldız 2024. All rights reserved.
 ##########################
 ***/
 
 /* #region MAIN */
 /* ########################## */
 
-/* #region UNDERLINE ANIMATION */
 /***
-Underline animation on hover.
+- Underline animation on hover.
 ***/
 
 .underline {
@@ -34,9 +32,8 @@ Underline animation on hover.
       transparent 80%);
 }
 
-/* #region TYPING ANIMATION */
 /***
-Typing animation for texts.
+- Typing animation for texts.
 ***/
 
 .typewriter {
@@ -58,7 +55,5 @@ Typing animation for texts.
     width: 100%;
   }
 }
-
-/*#endregion */
 
 /*#endregion */

@@ -4,7 +4,6 @@ BODY.CSS
 - COLLECTION: GLOBAL
 - LOAD ORDER: CSS/B/02
 - DESCRIPTION: Main Body CSS.
-M. Yıldız 2024. All rights reserved.
 ##########################
 ***/
 
@@ -16,6 +15,7 @@ M. Yıldız 2024. All rights reserved.
 - GB is a generic Ccontainer containing page body, in the middle between header and footer.
 ***/
 
+/* CONTAINER: GLOBAL BODY */
 #gb {
   /* Disposition */
   position: relative;

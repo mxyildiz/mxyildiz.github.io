@@ -22,7 +22,7 @@ M. Yıldız 2024. All rights reserved.
 
 /***
 ## CONTAINER 
-- Container is a generic element containing multiple elements.
++ Container is a generic element containing multiple elements.
 ***/
 
 .container {
@@ -46,7 +46,7 @@ M. Yıldız 2024. All rights reserved.
 
 /*** 
 ## WRAPPER
-- Wrapper is a generic element wrapping another single element.
++ Wrapper is a generic element wrapping another single element.
 ***/
 
 .wrapper {
@@ -70,9 +70,9 @@ M. Yıldız 2024. All rights reserved.
 
 /*** 
 ## STACK
-- Stack is a generic element that provides vertical and horizontal margins.
-- Each stack should be placed inside either a container or a wrapper.
-- Each stack should contain at least one row.
++ Stack is a generic element that provides vertical and horizontal margins.
++ Each stack should be placed inside either a container or a wrapper.
++ Each stack should contain at least one row.
 ***/
 
 .stack {
@@ -106,7 +106,7 @@ M. Yıldız 2024. All rights reserved.
 
 /*** 
 ## ROW
-- Row is a generic grid that provides vertical margins.
++ Row is a generic grid that provides vertical margins.
 ***/
 
 .row {
@@ -164,7 +164,7 @@ M. Yıldız 2024. All rights reserved.
 
 /***
 ## COLUMN 
-- Column is placed within a row, and it acts as a wrapper/container.
++ Column is placed within a row, and it acts as a wrapper/container.
 ***/
 
 .column {
@@ -184,7 +184,7 @@ M. Yıldız 2024. All rights reserved.
 
 /*** 
 ## ELEMENT
-- Element is a generic wrapper for a single element.
++ Element is a generic wrapper for a single element.
 ***/
 
 .element {

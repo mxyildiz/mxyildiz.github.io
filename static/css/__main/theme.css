@@ -4,7 +4,6 @@ THEME.CSS
 - COLLECTION: ESSENTIALS
 - LOAD ORDER: CSS/A/01B
 - DESCRIPTION: Features theme colors and fonts at the root; and sets colors.
-M. Yıldız 2024. All rights reserved.
 ##########################
 ***/
 
@@ -29,9 +28,9 @@ M. Yıldız 2024. All rights reserved.
   --color-accent: #971b2f;
   --color-high: rgba(151, 27, 47, 0.7); /* Highlight Color */
   /* Theme Colors */
-  --color-theme-alpha: #faeee5;
-  --color-theme-beta: #faeee5;
-  --color-theme-gamma: #faeee5;
+  --color-theme-alpha: #ffffff;
+  --color-theme-beta: #ffffff;
+  --color-theme-gamma: #ffffff;
   /* Background & Text Colors */
   --color-back: #ffffff;
   --color-text: #000000;

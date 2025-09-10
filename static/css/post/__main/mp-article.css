@@ -1,0 +1,269 @@
+/*** MP-POST.CSS v1.0 (TO REVISE)
+- Main CSS for Post.
+##########################
+***/
+
+.mp-article {
+  position: relative;
+}
+
+.mp-article > .stack {
+  position: relative;
+}
+
+/* ## D-HEADER */
+.mp-article .d-header {
+  position: relative;
+}
+
+.mp-article .d-header > .column {
+  position: relative;
+}
+
+/* ### SECTION: Post Identity */
+.mp-article .d-header .post-identity {
+  position: relative;
+}
+
+.mp-article .d-header .post-identity > .post-title {
+  position: relative;
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 400;
+  color: var(--color-black);
+}
+
+.mp-article .d-header .post-identity > .post-excerpt {
+  position: relative;
+  font-size: 1.333rem;
+  font-weight: 400;
+  color: var(--color-dark);
+}
+
+/* ### SECTION: Pre-Meta Information */
+.mp-article .d-header .post-premeta {
+  position: relative;
+  margin-bottom: 1.25rem;
+  font-size: 1.167rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.mp-article .d-header .post-premeta > .post-premeta-category {
+  position: relative;
+}
+
+/* ### SECTION: Meta Information */
+.mp-article .d-header .post-meta {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 1rem 2rem;
+}
+
+.mp-article .d-header .post-meta .icon {
+  position: relative;
+  height: 1.167rem;
+  width: 1.167rem;
+  margin-right: 0.75rem;
+  cursor: auto;
+}
+
+.mp-article .d-header .post-meta > .post-meta-author {
+  position: relative;
+  font-size: 1.167rem;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.mp-article .d-header .post-meta > .post-meta-date {
+  position: relative;
+  font-size: 1.167rem;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.mp-article .d-header .post-meta > .post-meta-revision {
+  position: relative;
+  font-size: 1.167rem;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+/* ### SECTION: Feature Information*/
+.mp-article .d-header .post-feature {
+  position: relative;
+}
+
+.mp-article .d-header .post-feature > .post-figure {
+  position: relative;
+  overflow: hidden;
+  margin: 0rem 0rem;
+  width: 100%;
+  height: 440px;
+}
+
+.mp-article .d-header .post-feature > .post-figure > .wrapper {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.mp-article .d-header .post-feature > .post-figure > .wrapper > .post-figure-image {
+  position: relative;
+  height: 90%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mp-article .d-header .post-feature > .post-figure > figcaption {
+  position: relative;
+  top: 90%;
+  height: 10%;
+  padding: 0.5rem 0rem;
+  text-align: left;
+  font-size: 1.167rem;
+  color: var(--c-shade-dark);
+}
+
+.mp-article .d-header .post-feature > .post-figure--1080p {
+  position: relative;
+}
+
+.mp-article .d-header .post-feature > .post-figure--1080p > .wrapper {
+  position: relative;
+  line-height: 0;
+}
+
+.mp-article .d-header .post-feature > .post-figure--1080p > .wrapper > .post-figure-image {
+  position: relative;
+
+}
+
+.mp-article .d-header .post-feature > .post-figure--1080p > figcaption {
+  position: relative;
+  padding: 0.5rem 0rem;
+  text-align: left;
+  font-size: 1.167rem;
+  color: var(--c-shade-dark);
+}
+
+
+/* ## D-CONTENT ## */
+.mp-article .d-content {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ### DIV: Post-Read */
+.mp-article .d-content .post-read {
+  position: relative;
+  max-width: var(--width-text);
+  font-family: var(--font-serif);
+}
+
+.mp-article .d-content .post-read p {
+  position: relative;
+  margin-top: 1rem;
+  font-family: var(--font-serif);
+  font-size: 1.33rem;
+}
+
+/* #### Post_Read Styles */ 
+/* Figures */
+.mp-article .d-content .post-read figure {
+  margin: 1rem auto;
+}
+
+.mp-article .d-content .post-read figure img {
+  position: relative;
+}
+
+.mp-article .d-content .post-read figure figcaption {
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--color-shade);
+}
+
+/* Blockquotes */
+.mp-article .d-content .post-read blockquote {
+  margin: 1rem auto;
+}
+
+.mp-article .d-content .post-read .blockquote--highlight {
+  font-size: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-left: 0.5rem solid var(--color-shade);
+}
+
+.mp-article .d-content .post-read .blockquote--quote {
+  font-size: 1.167rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Lists */
+.mp-article .d-content .post-read ul {
+  margin: 1rem auto;
+  font-size: 1.167rem;
+  list-style: circle inside;
+}
+
+.mp-article .d-content .post-read ol {
+  margin: 1rem auto;
+  font-size: 1.333rem;
+  list-style: decimal inside;
+}
+
+/* Links */
+.mp-article .d-content .post-read a {
+  color: var(--color-accent);
+}
+
+/***
+# ALTERNATIVE VERSIONS
+***/
+
+/* ## ALPHA */
+.mp-article--alpha .d-header {
+  border-bottom: 2px solid var(--color-black) ;
+}
+
+.mp-article--alpha .d-header .post-identity > .post-title {
+  grid-row: 2;
+}
+
+.mp-article--alpha .d-header .post-identity > .post-excerpt {
+  grid-row: 3;
+}
+
+.mp-article--alpha .d-header .post-premeta {
+  grid-row: 1;
+}
+
+.mp-article--alpha .d-header .post-premeta  {
+  width: fit-content;
+  margin-bottom: 1.25rem;
+}
+
+.mp-article--alpha .d-header .post-premeta > .post-premeta-category {
+  border-bottom: 0.5rem solid var(--color-accent);
+  text-decoration: none;
+}
+
+.mp-article--alpha .d-header .post-premeta > .post-premeta-category:hover {
+  border-bottom: 0.2rem solid var(--color-accent);
+}
+
+.mp-article--alpha .d-header .post-meta {
+  grid-row: 3;
+}

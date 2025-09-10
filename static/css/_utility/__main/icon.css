@@ -1,11 +1,13 @@
 /*** ICON.CSS v1.0 (last updated January 2023)
-Features icon settings and resources.
-M. Yıldız 2024. All rights reserved.
+> Features icon settings and resources.
 ##########################
 ***/
 
+/* #region MAIN */
+/* ########################## */
+
 /***
- # General Settings
+ # GENERAL SETTINGS
  ***/
 .icon {
   position: relative;
@@ -18,7 +20,7 @@ M. Yıldız 2024. All rights reserved.
 }
 
 /***
- # Social Media Icons 
+ # SOCIAL MEDIA ICONS
  ***/
 .icon-social {
   height: 1.5rem;
@@ -26,7 +28,7 @@ M. Yıldız 2024. All rights reserved.
 }
 
 /***
- # Span Classes
+ # SPAN CLASSES FOR PRIMITIVES
  ***/
 .icon-caret-left {
   mask: url(/static/visual/icons/primitive/caret-left.svg) no-repeat center;
@@ -63,3 +65,5 @@ M. Yıldız 2024. All rights reserved.
   -webkit-mask: url(/static/visual/icons/primitive/calendar-days.svg) no-repeat
     center;
 }
+
+/* #endregion */

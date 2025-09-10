@@ -1,7 +1,8 @@
-/* #region mu-menu--alpha */
-/* ########################## */
-/* Styles for the local component: MENU. */
-/* M. Yıldız 2024. All rights reserved. */
+/*** MU-MENU--ALPHA.CSS v1.0 (last updated June 2024)
+- This is a Utility Module (MU); a primary menu (variation: alpha).
+- An active template is available within Header.html.
+##########################
+***/
 
 /* #region # MAIN */
 /* ########################## */
@@ -44,3 +45,5 @@
   font-size: 1rem;
   font-weight: 400;
 }
+
+/* #endregion */
