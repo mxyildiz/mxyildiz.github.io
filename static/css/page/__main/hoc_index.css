@@ -1,0 +1,11 @@
+#hero {
+    margin-top: 6rem;
+}
+
+@media (max-width: 540px) {
+    
+  #hero {
+    margin-top: 2rem;
+  }
+    
+}
