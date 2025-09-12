@@ -47,7 +47,7 @@ html * {
 ## Headings
 ***/
 h1 {
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 3.000em;
   font-weight: 700;
@@ -60,7 +60,7 @@ h1 {
 }
 
 h2 {
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
   font-size: 2.000rem;
   font-weight: 700;
