@@ -4,7 +4,7 @@ THEME.CSS
 - COLLECTION: ESSENTIALS
 - LOAD ORDER: CSS/A/01B
 - DESCRIPTION: Features theme colors and fonts at the root; and sets colors.
-© M. Yıldız 2024. All rights reserved.
+© M. Yıldız 2020–2026. All rights reserved.
 ##########################
 ***/
 
@@ -37,15 +37,91 @@ THEME.CSS
   --color-text: #000000;
 }
 
-/*** 
-## VARIABLES: FONTS
-+ These are the default values of sans-serif and serif fonts.
+/***
+## VARIABLES: SPACING
++ A 4px-based spacing scale (rems for accessibility / zoom).
++ seven steps cover gutters, gaps, paddings, and section rhythms used
+  across the project. Tighter values (1.25 / 2.5 / 3 rem) are
+  acceptable inline where a between-step gap is genuinely needed; the
+  named tokens are the defaults to reach for first.
++ Reference: 1rem = 16px (typography.css html font-size = 12pt ≈ 16px).
 ***/
 
 :root {
+  --space-2xs: 0.5rem;  /*  8px — chip padding, tight inline gaps      */
+  --space-xs:  0.75rem; /* 12px — other                                */
+  --space-sm:  1rem;    /* 16px — base paragraph rhythm, list gaps     */
+  --space-md:  2rem;    /* 32px — row margins, gutter padding          */
+  --space-lg:  4rem;    /* 64px — section padding, dividers            */
+  --space-xl:  6rem;    /* 96px — page-module hero / band padding      */
+  --space-2xl: 8rem;    /* 128px — full-bleed band internal padding    */
+}
+
+/***
+## VARIABLES: FONTS
++ Default sans-serif and serif fonts.
++ Each family lists a metric-overridden local fallback ahead of the
+  generic, so the swap from fallback to Typekit webfont triggers no
+  relayout (no CLS).
+***/
+
+@font-face {
+  font-family: "futura-pt-fallback";
+  src: local("Arial"), local("Helvetica");
+  size-adjust: 100%;
+  ascent-override: 92%;
+  descent-override: 25%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "adobe-caslon-fallback";
+  src: local("Times New Roman"), local("Times");
+  size-adjust: 96%;
+  ascent-override: 84%;
+  descent-override: 21%;
+  line-gap-override: 0%;
+}
+
+:root {
   /* Fonts */
-  --font-sans: "futura-pt", sans-serif;
-  --font-serif: "adobe-caslon-pro", "Times New Roman", serif;
+  --font-sans: "futura-pt", "futura-pt-fallback", sans-serif;
+  --font-serif: "adobe-caslon-pro", "adobe-caslon-fallback", serif;
+}
+
+/***
+## VARIABLES: TYPE SCALE
++ Em-relative font-size scale. Each token names the role it covers most
+  often; inline values (0.6 / 0.9 / 0.95 / 1.125 / 1.35 / 1.6 / 2.5 / 4.5em)
+  are acceptable for between-step typographic decisions (drop-caps,
+  ticker dots, mid-scale leads).
+***/
+
+:root {
+  --type-2xs: 0.75em;   /* micro eyebrow                                */
+  --type-xs:  0.875em;  /* eyebrow standard, sans secondary             */
+  --type-sm:  1em;      /* body base                                    */
+  --type-md:  1.25em;   /* article body, postcard title                 */
+  --type-lg:  1.5em;    /* h3, blockquote                               */
+  --type-xl:  2em;      /* h2                                           */
+  --type-2xl: 3em;      /* h1                                           */
+  --type-3xl: 4em;      /* title-display                                */
+}
+
+/***
+## VARIABLES: LETTER-SPACING (TRACKING)
++ Negative values for display headings (compress); positive for uppercase
+  micros (open up). Outliers (-0.005 / -0.01 / -0.05 / 0.24em) stay
+  inline where a between-step optical adjustment is needed.
+***/
+
+:root {
+  --track-tight:    -0.02em;  /* default display tightening            */
+  --track-tighter:  -0.04em;  /* aggressive (hero wordmark)            */
+
+  --track-wide:     0.04em;   /* subtle small-caps                     */
+  --track-wider:    0.16em;   /* standard eyebrow                      */
+  --track-widest:   0.32em;   /* micro eyebrow                         */
 }
 
 /* #endregion */

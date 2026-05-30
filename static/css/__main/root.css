@@ -4,7 +4,7 @@ ROOT.CSS
 - COLLECTION: ESSENTIALS
 - LOAD ORDER: CSS/A/01A
 - DESCRIPTION: Sets root variables such as width settings and colors.
-© M. Yıldız 2024. All rights reserved.
+© M. Yıldız 2020–2026. All rights reserved.
 ##########################
 ***/
 
@@ -57,6 +57,11 @@ ROOT.CSS
   --color-back: #ffffff;
   /* Text Color */
   --color-text: #000000;
+  --color-text-muted: #595959;
+
+  /* Overlay Colors */
+  --color-overlay-strong: rgba(0, 0, 0, 0.55);
+  --color-overlay-soft:   rgba(0, 0, 0, 0.45);
 }
 
 /*** 
